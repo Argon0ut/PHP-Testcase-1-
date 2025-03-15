@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import "./App.css";
+import RegForm from "./RegForm";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+function App() {
+  return (
+    <div className="app-container">
+      <RegForm />
+    </div>
+  );
+}
+
+export default App;
