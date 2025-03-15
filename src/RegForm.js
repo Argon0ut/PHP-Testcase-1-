@@ -12,11 +12,12 @@ const RegForm = () => {
     const submitting = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost/backend/register.php", {
+            const response = await fetch("http://localhost/test-form/backend/register.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(info),
             });
+            
     
             const data = await response.json();
             if (data.message) {
